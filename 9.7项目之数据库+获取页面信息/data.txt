@@ -1,0 +1,5 @@
+sid	sname	cid	sex	age	pwd	tel	cid	cname	status	
+10001	小法	1001	女	18	aaaa	18274715172	1001	YC22	undefined
+10002	法法_1	1002	女	21	aaaa	110110110111	1002	YC24	undefined
+10003	法法_2	1002	女	22	aaaa	110110110112	1002	YC24	undefined
+10004	法法_3	1002	女	23	aaaa	110110110113	1002	YC24	undefined

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生登录</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        function userLogin(){
+            var sid= $.trim( $("#sid").val());
+            var pwd= $.trim( $("#pwd").val());
+
+            $.post("/adduser",{cid:cid,sname:sname,pwd:pwd,sex:sex,age:age,tel:tel},function(data){
+                data= $.trim(data);
+                if(data=="0"){
+                    alert("获取数据库连接失败，请检查数据库连接...");
+                }else if(data=="1"){
+                    alert("注册学生信息失败...");
+                }else if("data==2"){
+                    alert("请选择学生性别...");
+                }else{
+                    alert("注册学生信息成功，学号为："+data);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        学号：<input type="number" name="sid" id="sid"/>
+        密码：<input type="password" name="pwd" id="pwd"/>
+        <input type="button" value="登录" onclick="userLogin()"/>
+    </ul>
+    <h1><a href="reg.html">注册</a></h1>
+</body>
+</html>

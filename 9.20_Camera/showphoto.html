@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片浏览</title>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $.get("getAllPhoto",null,function(data){
+                if(data instanceof Array){
+                    for(var index in data){
+                        $("body").append($("<img src='images/"+data[index]+"'/>")).append("&nbsp;&nbsp;");
+                    }
+                }else{
+                    alert("获取照片失败...");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

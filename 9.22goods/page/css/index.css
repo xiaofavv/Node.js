@@ -1,0 +1,72 @@
+header{
+    text-align: center;
+    position: fixed;
+    top:0px;
+    left:0px;
+    background: #c0c0c0;
+    opacity: .8;
+    width: 100%;
+    height:30px;
+    line-height: 30px;
+}
+
+article{
+    margin-top: 40px;
+    width:1000px;
+    background: #ccc;
+    height: 2000px;
+}
+
+article ul{
+    width:100%;
+}
+
+article ul li{
+    float: left;
+    width:140px;
+    text-align: center;
+    background: pink;
+    margin: 20px 20px;
+    padding: 20px 8px;
+    border:2px solid #fff;
+    border-radius: 7px;
+}
+
+article ul li dd{
+   line-height: 24px;
+}
+
+.goods_price{
+    color:red!important;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+article ul li dl dt img{
+    width: 60px;
+    height:80px;
+}
+
+article div{
+    clear:both;
+    text-align: center;
+}
+
+#pageInfo li,#pageInfo li a{
+    display: inline-block;
+    width:24px;
+    height:24px;
+    line-height:24px;
+    padding: 0px;
+    font-size: 14px;
+}
+#pageInfo .checked{
+    background: #CC6666;
+    color:#fff;
+}
+#pageInfo .unchecked{
+    color:#ccc;
+}
+#pageInfo li a:hover{
+    background: #999;
+}

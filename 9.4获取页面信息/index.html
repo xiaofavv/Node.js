@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <script>
+        function $(name){
+            return document.getElementsByName(name).item(0);
+        }
+        function checkInfo(){
+            var uname=$("uname").value;
+            var pwd=$("pwd").value;
+            if(uname==""){
+                alert("用户不能为空...");//在项目中忌讳用弹框提示
+                return false;
+            }
+            if(pwd==""){
+                alert("密码不能为空...");//在项目中忌讳用弹框提示
+                return false;
+            }
+            //提交表单
+           document.getElementById("myform").submit();
+        }
+    </script>
+</head>
+<body>
+    <!--submit不论怎样都可以提交，所以可以写一个事件阻止它-->
+   <!--<form action="http://127.0.0.1:8888/addUser" method="get" onsubmit="return checkInfo()">-->
+    <!--button没有提交的真正功能，只是按钮效果，所以要写一个事件帮助它提交-->
+   <form action="http://127.0.0.1:8888/addUser" method="get" id="myform">
+       <label>用户名：</label>
+       <input type="text" name="uname"/>
+       <label>密码：</label>
+       <input type="password" name="pwd"/>
+       <!--<input type="submit" value="提交"/>-->
+       <input type="button" value="提交" onclick="checkInfo()"/>
+       <input type="button" value="注册" onclick="location.href='http://127.0.0.1:8888/showreg'"/>
+   </form>
+    <a href="http://127.0.0.1:8888/showreg">注册新账户</a>
+</body>
+</html>
